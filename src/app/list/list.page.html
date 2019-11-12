@@ -10,18 +10,29 @@
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-item *ngFor="let item of items">
-      <ion-icon [name]="item.icon" slot="start"></ion-icon>
-      {{item.title}}
-      <div class="item-note" slot="end">
-        {{item.note}}
-      </div>
-    </ion-item>
-  </ion-list>
-  <!--
-    <div *ngIf="selectedItem" padding>
-      You navigated here from <b>{{selectedItem.title }}</b>
-    </div>
-  -->
+  <ion-slide>
+    <ion-grid>
+      <ion-row>
+        <ion-col *ngFor="let card of cards" size="4">
+          <ion-card>
+            <img src="/assets/shapes.svg" alt="" />
+            <ion-card-header>
+              <ion-card-subtitle>Get Started</ion-card-subtitle>
+              <ion-card-title>Welcome to Ionic</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <p>Now that your app has been created, you'll want to start building out features and components. Check out some of the resources below for next steps.</p>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-slide>
 </ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>
+      Footer
+    </ion-title>
+  </ion-toolbar>
+</ion-footer>
