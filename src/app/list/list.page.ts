@@ -29,7 +29,9 @@ export class ListPage implements OnInit {
       });
     }
   }
-  public cards: Array<Number> = [1,2,3,4,5,6,7,8,9,10,11,12,13,14];
+  
+  public cards: Array<Number> = [1,2,3,4,5,6,7,8,9];
+  //public cards: Array<Number> = [1,2,3,4,5,6,7,8,9,10,11,12,13,14];
 
   ngOnInit() {
   }
@@ -37,4 +39,5 @@ export class ListPage implements OnInit {
   // navigate(item) {
   //   this.router.navigate(['/list', JSON.stringify(item)]);
   // }
+
 }
