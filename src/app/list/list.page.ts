@@ -29,9 +29,22 @@ export class ListPage implements OnInit {
       });
     }
   }
-  
-  public cards: Array<Number> = [1,2,3,4,5,6,7,8,9];
+
+  public cards: Array<Number> = [1, 2, 3, 4, 5, 6, 7, 8, 9];
   //public cards: Array<Number> = [1,2,3,4,5,6,7,8,9,10,11,12,13,14];
+
+
+  public products: Product[] = [
+    { name: "Churros", price: 2, image: "/assets/shapes.svg" },
+    { name: "Porras", price: 3, image: "/assets/shapes.svg" },
+    { name: "Chocolate", price: 2.5, image: "/assets/shapes.svg"},
+    { name: "Cafe", price: 1, image: "/assets/shapes.svg" },
+    { name: "Colacao", price: 1, image: "/assets/shapes.svg" },
+    { name: "Patatas fritas", price: 2.43, image: "/assets/shapes.svg" },
+    { name: "Item random", price: 342, image: "/assets/shapes.svg" },
+    { name: "No se me ocurren nombres largos", price: 2343 , image: "/assets/shapes.svg"},
+    { name: "Piña", price: 2343, image: "/assets/shapes.svg" },
+  ]
 
   ngOnInit() {
   }
@@ -40,4 +53,10 @@ export class ListPage implements OnInit {
   //   this.router.navigate(['/list', JSON.stringify(item)]);
   // }
 
+}
+
+interface Product {
+  name: string;
+  price: number;
+  image?: string;
 }
