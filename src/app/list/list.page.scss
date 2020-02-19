@@ -1,66 +1,35 @@
 
-ion-slides {
+ion-slides,
+ion-grid,
+ion-row  {
     height: 100%;
 }
 
-
-.cardsContainer {
-    display: block;
-    // display: flex;
-    // flex-wrap: wrap;
-}
-
-// ion-card {
-//     width: 31%;
-//     margin: 10px;
-//     display: inline-flex;
-//     flex-direction: row;
-//     flex-wrap: wrap;
-//     justify-content: flex-start;
-//     align-content: stretch;
-//     align-items: stretch; 
-    
-//     // float: left;
-//     // position: relative;
-//     // max-width: 33%;
-//     // margin: 0px;
-// }
-ion-card{
-    display: flex;
-    flex-direction: column;
-    
-    width:100%;
-    margin: 0px;
-    padding: 0px;
-}
-
-// ion-card{
-//     display: flex;
-//     flex-direction: column;
-//     width: 100% !important;
-//     margin: 0 !important;
-//   }
-.card-title {
-    position: absolute;
-    bottom: 5%;
-    font-size: 2.0em;
-    width: 100%;
-    font-weight: bold;
-    color: #fff;
-}
-
-.ticketList {
-    float: left;
-    border-left: 1px solid black;
-}
-
-.catalog {
-    float: left;
-}
-
-ion-grid {
-    height: 100%
-}
-ion-row {
-    height: 100%
+ion-card {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    .image-container {
+        position: relative;
+        width: 100%;
+        padding-bottom: 65%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        ion-badge {
+            position: absolute;
+            bottom: .5em; 
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    .price {
+        font-weight: bold;
+        font-size: 1.2em;
+        color: red;
+    }
+    .title {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
 }
