@@ -1,31 +1,43 @@
 
+#ticketList {
+    width: 100%;
+}
 ion-slides,
 ion-grid,
 ion-row  {
-    height: 100%;
+    //height: 100%;
 }
 
 ion-card {
     padding: 0;
     margin: 0;
     height: 100%;
+    width: auto;
     .image-container {
         position: relative;
-        width: 100%;
+        width: auto;
         padding-bottom: 65%;
         background-repeat: no-repeat;
         background-size: cover;
-        ion-badge {
-            position: absolute;
-            bottom: .5em; 
-            left: 50%;
-            transform: translateX(-50%);
-        }
+        // ion-badge {
+        //     position: absolute;
+        //     bottom: .5em; 
+        //     left: 50%;
+        //     transform: translateX(-50%);
+        // }
+    }
+    ion-card-content{
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: 16px;
+        line-height: 1.4;
     }
     .price {
         font-weight: bold;
         font-size: 1.2em;
-        color: red;
+        color: black;
     }
     .title {
         white-space: nowrap;
@@ -33,3 +45,5 @@ ion-card {
         text-overflow: ellipsis;
     }
 }
+
+
