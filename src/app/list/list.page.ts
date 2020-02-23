@@ -31,28 +31,37 @@ export class ListPage implements OnInit {
   }
 
   public products: Product[] = [
-    { name: "Rosca", price: 1, image: "/assets/TestPhotos/Rosca.jpg" },
-    { name: "Patata", price: 1, image: "/assets/TestPhotos/R_Patata.jpg" },
-    { name: "Chocolate", price: 1.50, image: "/assets/TestPhotos/IMG_0017.JPG"},
-    { name: "Cafe", price: 1.10, image: "/assets/TestPhotos/IMG_0029.PNG" },
-    { name: "Colacao", price: 1.20, image: "/assets/TestPhotos/IMG_0021.JPG" },
-    { name: "Patatas fritas", price: 2.50, image: "/assets/TestPhotos/IMG_0044.JPG" },
-    { name: "Avellanas", price: 4, image: "/assets/TestPhotos/IMG_0043.JPG" },
-    { name: "Leche", price: 1 , image: "/assets/TestPhotos/IMG_0038.JPG"},
-    { name: "Revuelto", price: 4, image: "/assets/TestPhotos/IMG_0047.JPG" },
+    { Id: 1, Name: "Rosca", Price: 1, Image: "/assets/TestPhotos/Rosca.jpg" },
+    { Id: 2, Name: "Patata", Price: 1, Image: "/assets/TestPhotos/R_Patata.jpg" },
+    { Id: 3, Name: "Chocolate", Price: 1.50, Image: "/assets/TestPhotos/IMG_0017.JPG"},
+    { Id: 4, Name: "Cafe", Price: 1.10, Image: "/assets/TestPhotos/IMG_0029.PNG" },
+    { Id: 5, Name: "Colacao", Price: 1.20, Image: "/assets/TestPhotos/IMG_0021.JPG" },
+    { Id: 6, Name: "Patatas fritas", Price: 2.50, Image: "/assets/TestPhotos/IMG_0044.JPG" },
+    { Id: 7, Name: "Avellanas", Price: 4, Image: "/assets/TestPhotos/IMG_0043.JPG" },
+    { Id: 8, Name: "Leche", Price: 1 , Image: "/assets/TestPhotos/IMG_0038.JPG"},
+    { Id: 9, Name: "Revuelto", Price: 4, Image: "/assets/TestPhotos/IMG_0047.JPG" },
   ]
+  total: number = 0;
+  shopList: Product[] = [];
 
   ngOnInit() {
   }
-  // add back when alpha.4 is out
-  // navigate(item) {
-  //   this.router.navigate(['/list', JSON.stringify(item)]);
-  // }
+
+  addProduct(productToAdd: Product){
+    this.shopList.push(productToAdd);
+    //this.shopList.reduce()
+    this.getTotal();
+  }
+
+  getTotal(){
+    this.total = this.shopList.reduce((total, productToAdd) => { return total + productToAdd.Price; }, 0);
+  }
 
 }
 
 interface Product {
-  name: string;
-  price: number;
-  image?: string;
+  Id: number;
+  Name: string;
+  Price: number;
+  Image?: string;
 }

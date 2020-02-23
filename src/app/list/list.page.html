@@ -20,12 +20,12 @@
           <ion-slides pager="true">
             <ion-slide>
               <ion-row class="ion-align-items-start">
-                <ion-col size="4" *ngFor="let product of products; index as i">
-                  <ion-card>
-                    <div class="image-container" [style.backgroundImage]="'url('+ product.image +')'"></div>
+                <ion-col size="4" *ngFor="let product of products">
+                  <ion-card (click)="addProduct(product)">
+                    <div class="image-container" [style.backgroundImage]="'url('+ product.Image +')'"></div>
                     <ion-card-content>
-                      <h4 class="title" title="product.name">{{product.name}}</h4>
-                      <h5 class="price">{{product.price}} €</h5>
+                      <h4 class="title" title="product.name">{{product.Name}}</h4>
+                      <h5 class="price">{{product.Price}} €</h5>
                     </ion-card-content>
                   </ion-card>
                 </ion-col>
@@ -59,20 +59,10 @@
 
     <ion-content>
       <ion-list lines="full">
-        <ion-item>
-          <ion-label>Rosca</ion-label>
+        <ion-item *ngFor="let item of shopList">
+          <ion-label>{{ item.Name }}</ion-label>
           <ion-note slot="start" color="black">1</ion-note>
-          <ion-note slot="end" color="black">1,00</ion-note>
-        </ion-item>
-        <ion-item>
-          <ion-label>Café</ion-label>
-          <ion-note slot="start" color="black">2</ion-note>
-          <ion-note slot="end" color="black">2,20</ion-note>
-        </ion-item>
-        <ion-item>
-          <ion-label>Agua</ion-label>
-          <ion-note slot="start" color="black">1</ion-note>
-          <ion-note slot="end" color="black">0,90</ion-note>
+          <ion-note slot="end" color="black">{{ item.Price | number:'1.2-2' }}</ion-note>
         </ion-item>
       </ion-list>
 
@@ -85,7 +75,7 @@
               <ion-text style="font-size:1.2em">Total</ion-text>
             </ion-col>
             <ion-col style="text-align: right">
-              <ion-text style="font-size:1.2em;">4,10 </ion-text><ion-text color="pr" style="font-size:0.8em">€</ion-text>
+              <ion-text style="font-size:1.2em;">{{ total | number:'1.2-2' }}</ion-text><ion-text color="pr" style="font-size:0.8em">€</ion-text>
             </ion-col>
           </ion-row>
           <ion-row>
