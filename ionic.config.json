@@ -1,5 +1,8 @@
 {
   "name": "TPV",
-  "integrations": {},
-  "type": "angular"
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "eec58ce6"
 }
