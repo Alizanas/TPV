@@ -30,20 +30,16 @@ export class ListPage implements OnInit {
     }
   }
 
-  public cards: Array<Number> = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-  //public cards: Array<Number> = [1,2,3,4,5,6,7,8,9,10,11,12,13,14];
-
-
   public products: Product[] = [
-    { name: "Churros", price: 2, image: "/assets/shapes.svg" },
-    { name: "Porras", price: 3, image: "/assets/shapes.svg" },
-    { name: "Chocolate", price: 2.5, image: "/assets/shapes.svg"},
-    { name: "Cafe", price: 1, image: "/assets/shapes.svg" },
-    { name: "Colacao", price: 1, image: "/assets/shapes.svg" },
-    { name: "Patatas fritas", price: 2.43, image: "/assets/shapes.svg" },
-    { name: "Item random", price: 342, image: "/assets/shapes.svg" },
-    { name: "No se me ocurren nombres largos", price: 2343 , image: "/assets/shapes.svg"},
-    { name: "Piña", price: 2343, image: "/assets/shapes.svg" },
+    { name: "Rosca", price: 1, image: "/assets/TestPhotos/Rosca.jpg" },
+    { name: "Patata", price: 1, image: "/assets/TestPhotos/R_Patata.jpg" },
+    { name: "Chocolate", price: 1.50, image: "/assets/TestPhotos/IMG_0017.JPG"},
+    { name: "Cafe", price: 1.10, image: "/assets/TestPhotos/IMG_0029.PNG" },
+    { name: "Colacao", price: 1.20, image: "/assets/TestPhotos/IMG_0021.JPG" },
+    { name: "Patatas fritas", price: 2.50, image: "/assets/TestPhotos/IMG_0044.JPG" },
+    { name: "Avellanas", price: 4, image: "/assets/TestPhotos/IMG_0043.JPG" },
+    { name: "Leche", price: 1 , image: "/assets/TestPhotos/IMG_0038.JPG"},
+    { name: "Revuelto", price: 4, image: "/assets/TestPhotos/IMG_0047.JPG" },
   ]
 
   ngOnInit() {
